@@ -16,7 +16,7 @@ const OPENWEATHERMAP_API_KEY = process.env.OPENWEATHERMAP_API_KEY || '';
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY || '';
 const SERPAPI_KEY = process.env.SERPAPI_KEY || '';
 const TICKETMASTER_API_KEY = process.env.TICKETMASTER_API_KEY || '';
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY || 'sk-';
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY || '';
 
 async function getLocation() {
   try {
