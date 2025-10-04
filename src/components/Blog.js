@@ -9,9 +9,6 @@ import MainFeaturedPost from './MainFeaturedPost';
 import FeaturedPost from './FeaturedPost';
 //
 import Footer from './Footer';
-import post1 from './blog-post.1.md';
-import post2 from './blog-post.2.md';
-import post3 from './blog-post.3.md';
 
 
 export const sections = [
@@ -67,8 +64,9 @@ const featuredPosts = [
   },
 ];
 
-// const posts = [post1, post2, post3];
+// Posts content imports removed; not used in this layout
 
+// Sidebar config retained for future use (currently unused)
 const sidebar = {
   title: 'About',
   description: 'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
@@ -142,7 +140,7 @@ const theme = createTheme({
   },
 });
 export default function Blog() {
-  const matches = useMediaQuery(theme.breakpoints.up('md'));
+  // const matches = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
     <ThemeProvider theme={theme}>

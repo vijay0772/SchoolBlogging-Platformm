@@ -45,7 +45,7 @@ function Header({ sections, title }) {
   const [email, setEmail] = useState(user ? user.email : '');
   const [password, setPassword] = useState('');
   const [profileMessage, setProfileMessage] = useState('');
-  const [isAiAssistDialogOpen, setAiAssistDialogOpen] = useState(false); // New state for AI Assist dialog
+  // AI Assist dialog state not used; removing to satisfy CI
   const [users, setUsers] = useState([]);
   const [newUser, setNewUser] = useState({ username: '', email: '', password: '', persona: '' });
   const [isSubscribeOpen, setSubscribeOpen] = useState(false);
@@ -146,14 +146,7 @@ function Header({ sections, title }) {
     handleMenuClose();
   };
 
-  const handleAiAssistClick = () => {
-    setAiAssistDialogOpen(true);
-    handleMenuClose();
-  };
-
-  const handleAiAssistClose = () => {
-    setAiAssistDialogOpen(false);
-  };
+  // Removed unused AI Assist handlers
 
   const handleAddUser = () => {
     const updatedUsers = [...users, newUser];
