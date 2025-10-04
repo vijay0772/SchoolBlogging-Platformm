@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
@@ -89,8 +90,8 @@ app.post('/api/getSuggestions', async (req, res) => {
     } else if (isEventQuery(query)) {
         const city = "Chicago"; // Example city
         try {
-            const eventsData = await fetchEvents(query, city);
-            // Process and format your eventsData here to integrate into the additionalContext
+            await fetchEvents(query, city);
+            // Process and format your events data here if needed
         } catch (error) {
             console.error('Event fetch error:', error);
         }

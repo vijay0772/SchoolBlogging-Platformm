@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
@@ -13,7 +14,7 @@ app.use(express.json());
 // API keys setup
 const IPAPI_KEY = process.env.IPAPI_KEY || 'https://ipapi.co/json/';
 const OPENWEATHERMAP_API_KEY = process.env.OPENWEATHERMAP_API_KEY || '';
-const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY || '';
+// const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY || '';
 const SERPAPI_KEY = process.env.SERPAPI_KEY || '';
 const TICKETMASTER_API_KEY = process.env.TICKETMASTER_API_KEY || '';
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || '';

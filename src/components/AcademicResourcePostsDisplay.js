@@ -1,24 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Typography, Grid, Card, CardContent, CardMedia, Fade, Button, Dialog, DialogTitle, DialogContent, DialogActions, TextField, IconButton, Box, Avatar } from '@mui/material';
+import { Container, Typography, Grid, Card, CardContent, CardMedia, Fade, Button, Dialog, DialogTitle, DialogContent, DialogActions, TextField, Box, Avatar } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import CommentIcon from '@mui/icons-material/Comment';
-import CloseIcon from '@mui/icons-material/Close';
+//
 import { useUser } from '../UserContext'; // Import useUser hook
-import { CssBaseline, Paper, Link, useMediaQuery } from '@mui/material'; // Remove Button import
-import { useTheme } from '@mui/material/styles';
+import { CssBaseline } from '@mui/material';
 import Header from './Header'; // Import the Header component
 import Footer from './Footer'; // Import the Footer component
 
 const AcademicResourcePostsDisplay = () => {
-  const theme = useTheme();
+  //
   const [posts, setPosts] = useState([]);
   const [checked, setChecked] = useState(false);
   const [openCommentDialog, setOpenCommentDialog] = useState(false);
   const [currentPostId, setCurrentPostId] = useState(null);
   const [newComment, setNewComment] = useState('');
   const { user: currentUser } = useUser(); // Use the useUser hook to access the current user
-  const matches = useMediaQuery(theme.breakpoints.up('md')); // Use the useMediaQuery hook
 
   useEffect(() => {
     let loadedPosts = JSON.parse(localStorage.getItem('academicPosts')) || []; // Load posts from 'academicPosts' key
