@@ -1,9 +1,6 @@
 import React from 'react';
-import { CssBaseline, Grid, Container, useMediaQuery } from '@mui/material';
+import { CssBaseline, Grid, Container } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import XIcon from '@mui/icons-material/X';
 import Header from './Header';
 import MainFeaturedPost from './MainFeaturedPost';
 import FeaturedPost from './FeaturedPost';
@@ -66,22 +63,7 @@ const featuredPosts = [
 
 // Posts content imports removed; not used in this layout
 
-// Sidebar config retained for future use (currently unused)
-const sidebar = {
-  title: 'About',
-  description: 'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
-  archives: [
-    { title: 'March 2020', url: '#' },
-    { title: 'February 2020', url: '#' },
-    { title: 'January 2020', url: '#' },
-    // More archives...
-  ],
-  social: [
-    { name: 'GitHub', icon: GitHubIcon },
-    { name: 'Twitter', icon: XIcon },
-    { name: 'Facebook', icon: FacebookIcon },
-  ],
-};
+// Sidebar config removed (unused)
 // Enhanced theme for typography
 const theme = createTheme({
   palette: {
