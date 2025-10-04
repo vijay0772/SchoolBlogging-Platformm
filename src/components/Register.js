@@ -38,7 +38,7 @@ const Register = () => {
   };
 
   return (
-    <Box style={{ backgroundImage: 'url(https://source.unsplash.com/random?school)', backgroundSize: 'cover', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <Box style={{ backgroundImage: 'url(https://picsum.photos/seed/register-bg/1600/900)', backgroundSize: 'cover', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <Box style={{ width: '400px', padding: '20px', background: 'rgba(255, 255, 255, 0.8)', borderRadius: '10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)' }}>
         <Typography component="h1" variant="h4" style={{ color: '#000', marginBottom: '20px', fontWeight: 'bold', textAlign: 'center' }}>
           Sign up

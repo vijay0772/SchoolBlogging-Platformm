@@ -42,7 +42,7 @@ export const sections = [
 const mainFeaturedPost = {
   title: 'School Blogging Platform',
   description: "A platform for students to make a difference in the world.",
-  image: 'https://source.unsplash.com/random?school',
+  image: 'https://picsum.photos/seed/school/1600/700',
   imageText: 'main image description',
   linkText: 'Continue reading…',
 };
@@ -52,28 +52,28 @@ const featuredPosts = [
     title: 'Education Post',
     date: 'Nov 12',
     description: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://source.unsplash.com/random?education',
+    image: 'https://picsum.photos/seed/education/800/600',
     imageLabel: 'Image Text',
   },
   {
     title: 'Sports Post',
     date: 'Nov 11',
     description: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://api.unsplash.com/search/photos?query=minimal █',
+    image: 'https://picsum.photos/seed/sports/800/600',
     imageLabel: 'Image Text',
   },
   {
     title: 'Hollywood Post',
     date: 'Nov 11',
     description: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://source.unsplash.com/random?Hollywood',
+    image: 'https://picsum.photos/seed/hollywood/800/600',
     imageLabel: 'Image Text',
   },
   {
     title: 'Love Post',
     date: 'Nov 11',
     description: 'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://source.unsplash.com/random?Love',
+    image: 'https://picsum.photos/seed/love/800/600',
     imageLabel: 'Image Text',
   },
 ];

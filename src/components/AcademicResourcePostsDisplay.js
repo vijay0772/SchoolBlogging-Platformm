@@ -103,7 +103,7 @@ const AcademicResourcePostsDisplay = () => {
                   <CardMedia
                     component="img"
                     height="140"
-                    image={post.image || 'https://source.unsplash.com/random'}
+                    image={post.image || 'https://picsum.photos/seed/academic/600/400'}
                     alt={post.title}
                   />
                   <CardContent>

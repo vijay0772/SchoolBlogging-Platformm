@@ -27,12 +27,14 @@ const CreatePost = () => {
   const [postCategory, setPostCategory] = useState('');
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [backgroundImage, setBackgroundImage] = useState('https://source.unsplash.com/random');
+  const [backgroundImage, setBackgroundImage] = useState('https://picsum.photos/1600/900');
   const navigate = useNavigate();
   const { user } = useUser();
 
   useEffect(() => {
-    setBackgroundImage(`https://source.unsplash.com/random/${window.innerWidth}x${window.innerHeight}`);
+    const width = Math.max(window.innerWidth, 1200);
+    const height = Math.max(window.innerHeight, 800);
+    setBackgroundImage(`https://picsum.photos/seed/create-post-${width}x${height}/${width}/${height}`);
   }, []);
 
   const handleSubmit = async (e) => {

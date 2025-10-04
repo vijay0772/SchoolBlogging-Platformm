@@ -155,7 +155,7 @@ const PostsDisplay = () => {
                   <CardMedia
                     component="img"
                     height="140"
-                    image={post.image || 'https://source.unsplash.com/random?school'}
+                    image={post.image || 'https://picsum.photos/seed/school-card/600/400'}
                     alt={post.title}
                   />
                   <CardContent>

@@ -67,7 +67,7 @@ const ChatComponent = () => {
           width: '100%',
           height: '100%',
           zIndex: -1,
-          backgroundImage: "url('https://source.unsplash.com/random?school/800x600')",
+          backgroundImage: "url('https://picsum.photos/seed/school-chat/1200/800')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
