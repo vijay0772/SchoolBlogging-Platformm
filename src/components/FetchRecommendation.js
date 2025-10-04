@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Button, Modal, Box, Typography, CircularProgress, Card, CardContent } from '@mui/material';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Modal, Box, Typography, CircularProgress, Card, CardContent } from '@mui/material';
 import axios from 'axios';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
@@ -48,13 +48,8 @@ const RecommendationModal = ({ open, handleClose }) => {
         );
     }, []);
 
-    useEffect(() => {
-        if (currentLocation) {
-            fetchRecommendations();
-        }
-    }, [currentLocation]);
-
-    const fetchRecommendations = async () => {
+    const fetchRecommendations = useCallback(async () => {
+        if (!currentLocation) return;
         setLoading(true);
         setError('');
         try {
@@ -64,8 +59,7 @@ const RecommendationModal = ({ open, handleClose }) => {
             });
             if (response.data) {
                 setWeather(response.data.weather);
-                setSuggestedLocation(response.data.suggestedLocation);  // Ensure 'suggestedLocation' is a valid key in response.data
-    
+                setSuggestedLocation(response.data.suggestedLocation);
                 const newMarkers = response.data.events.reduce((acc, event) => {
                     if (event.details && event.details.latitude && event.details.longitude) {
                         acc.push({
@@ -75,25 +69,16 @@ const RecommendationModal = ({ open, handleClose }) => {
                             type: event.type.toLowerCase(),
                             details: event.details
                         });
-                    } else {
-                        console.log('Missing location details for event:', event);
                     }
                     return acc;
                 }, []);
-    
                 newMarkers.push({
                     name: "Your Location",
                     latitude: currentLocation.lat,
                     longitude: currentLocation.lng,
                     type: 'user',
-                    details: {
-                        address: 'Current location',
-                        date: '',
-                        time: '',
-                        hours: []
-                    }
+                    details: { address: 'Current location', date: '', time: '', hours: [] }
                 });
-    
                 setMarkers(newMarkers);
                 setRecommendations(response.data.events);
             } else {
@@ -105,7 +90,13 @@ const RecommendationModal = ({ open, handleClose }) => {
         } finally {
             setLoading(false);
         }
-    };
+    }, [currentLocation]);
+
+    useEffect(() => {
+        if (currentLocation) {
+            fetchRecommendations();
+        }
+    }, [currentLocation, fetchRecommendations]);
     
 
     return (

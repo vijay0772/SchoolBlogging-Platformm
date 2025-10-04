@@ -1,24 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import {
-  CssBaseline,
-  Grid,
-  Container,
-  Paper,
-  Box,
-  Typography,
-  Link,
-  Button,
-  useMediaQuery
-} from '@mui/material';
-import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
+import React from 'react';
+import { CssBaseline, Grid, Container, useMediaQuery } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
 import Header from './Header';
 import MainFeaturedPost from './MainFeaturedPost';
 import FeaturedPost from './FeaturedPost';
-import Main from './Main';
-import Sidebar from './Sidebar';
+//
 import Footer from './Footer';
 import post1 from './blog-post.1.md';
 import post2 from './blog-post.2.md';
@@ -78,7 +67,7 @@ const featuredPosts = [
   },
 ];
 
-const posts = [post1, post2, post3];
+// const posts = [post1, post2, post3];
 
 const sidebar = {
   title: 'About',
